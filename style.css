@@ -5,7 +5,7 @@
   --Check-Background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 
   /* LightTheme */
-  --background-image: url(/images/bg-desktop-light.jpg);
+  --background-image: url(bg-desktop-light.jpg);
   --background: hsl(0, 0%, 98%);
   --background-item: hsl(0, 0%, 98%);
   --Purple-300: hsl(234, 39%, 85%);
@@ -31,7 +31,7 @@ body {
   --Purple-700: hsl(233, 14%, 35%);
   --Purple-800: hsl(237, 14%, 26%);
   --Gray-600: #b0a2a25c;
-  --background-image: url(/images/bg-desktop-dark.jpg);
+  --background-image: url(bg-desktop-dark.jpg);
 }
 .container {
   position: relative;

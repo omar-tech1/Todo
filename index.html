@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo app</title>
+  </head>
+  <body>
+    <div class="container ">
+      <div class="container-todo">
+        <div class="heading">
+          <h1>Todo</h1>
+          <div class="icon">
+            <img src="images/icon-sun.svg" alt="sun" class="dark-mode sun" />
+            <img
+              src="images/icon-moon.svg"
+              alt="moon"
+              class="light-mood moon"
+            />
+          </div>
+        </div>
+        <div class="input-section">
+          <input id="lable-input" type="text" required placeholder="Create a new todo.." />
+        </div>
+        <div class="task-items">
+        </div>
+        <div class="info-tasks">
+          <p id="items-count"><span>0</span> items left</p>
+          <div class="stat-items">
+            <p id="all" class="active-state">all</p>
+            <p id="active">active</p>
+            <p id="complete">Completed</p>
+          </div>
+          <p class="clear" id="clear-completed">clear completed</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

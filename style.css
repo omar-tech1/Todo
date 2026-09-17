@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+:root {
+  /* Neutral */
+  --Blue-500: hsl(220, 98%, 61%);
+  --Check-Background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+  /* LightTheme */
+  --background-image: url(/images/bg-desktop-light.jpg);
+  --background: hsl(0, 0%, 98%);
+  --background-item: hsl(0, 0%, 98%);
+  --Purple-300: hsl(234, 39%, 85%);
+  --border-color: #47475f;
+  --color-item: #6F707B;
+  --Gray-600: hsl(236, 9%, 61%);
+  --Navy-850: hsl(235, 19%, 35%);
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dark-mode {
+  --background: #181824;
+  --background-item: hsl(235, 24%, 19%);
+  --color-item: hsl(234, 39%, 85%);
+  --Purple-100-hover: hsl(236, 33%, 92%);
+  --Purple-700: hsl(233, 14%, 35%);
+  --Purple-800: hsl(237, 14%, 26%);
+  --Gray-600: #b0a2a25c;
+  --background-image: url(/images/bg-desktop-dark.jpg);
+}
+.container {
+  position: relative;
+  align-items: center;
+  background-color: var(--background);
+  min-height: 100vh;
+  transition: all 0.3s ease-in-out;
+}
+.container::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 35vh;
+  content: "";
+  width: 100%;
+  background-image: var(--background-image);
+  background-size: cover;
+  transition: all ease-in-out .3s;
+}
+.container-todo {
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  width: 90%;
+  max-width: 450px;
+}
+/* heading */
+.heading {
+  color: white;
+  padding-top: 55px;
+  display: flex;
+  justify-content: space-between;
+}
+.heading h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 8.2px;
+}
+.heading img {
+  width: 20px;
+  cursor: pointer;
+}
+.heading .sun {
+  display: block;
+}
+.heading .moon{
+  display: none;
+}
+.container.dark-mode .sun {
+  display: none;
+}
+
+.container.dark-mode .moon {
+  display: block;
+}
+/* input-section */
+.input-section input {
+  outline: none;
+  margin: 20px 0;
+  width: 100%;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--background-item);
+  color: var(--Purple-100-hover);
+}
+.input-section input::placeholder{
+  padding-left: 15px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #73758D;
+}
+/* task items */
+.task-items {
+  display: flex;
+  border-radius: 5px 5px 0 0;
+  background-color: var(--background-item);
+  flex-direction: column;
+  /* gap: 40px; */
+}
+/* --Navy-850 */
+.task-item {
+  border-bottom: 1px solid var(--Gray-600);
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  color: var(--color-item);
+  font-size: 13px;
+  font-weight: 700;
+}
+.task-item .task{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.task-item input:checked ~.task p {
+text-decoration: line-through; 
+color: var(--Purple-700);
+
+}
+.task-item .task img{
+  width: 18px;
+height: 18px;
+  right: 0;
+  top: 0;
+position: absolute;
+opacity: 0;
+transition: opacity 0.3s ease-in-out ;
+cursor: pointer;
+}
+.task-item:hover img{
+  opacity: 1;
+}
+.task-item input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 22px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  margin-right: 15px;
+  
+}
+
+.task-item input[type="checkbox"]:checked {
+  background-image:
+    url("images/icon-check.svg"),
+    linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-repeat: no-repeat;
+  background-position: center, center;
+  border: none;
+}
+/* info-tasks */
+.info-tasks {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--Navy-850);
+  background-color: var(--background-item);
+  border-radius: 0 0 5px 5px;
+}
+.info-tasks .stat-items,
+.info-tasks .clear {
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.info-tasks .stat-items {
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  gap: 10px;
+}
+.info-tasks .stat-items .active-state {
+  color: var(--Blue-500);
+  font-weight: 700;
+}

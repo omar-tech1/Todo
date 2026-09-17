@@ -163,7 +163,7 @@ cursor: pointer;
 
 .task-item input[type="checkbox"]:checked {
   background-image:
-    url("images/icon-check.svg"),
+    url("./icon-check.svg"),
     linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   background-repeat: no-repeat;
   background-position: center, center;

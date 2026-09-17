@@ -12,7 +12,7 @@ import { initTaskListeners } from "./initTaskListeners.js";
               <p>${task.value}</p>
               <img
                 class="icon-delete"
-                src="images/icon-cross.svg"
+                src="icon-cross.svg"
                 alt="cross"
               />
             </div>

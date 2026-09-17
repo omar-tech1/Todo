@@ -1,9 +1,9 @@
-import { addTask } from "./scripts/add-task.js";
-import { clearCompleted } from "./scripts/clear-completed.js";
-import { darkElement, inputElement } from "./scripts/elements.js";
-import { filterTasks } from "./scripts/filter-tasks.js";
-import { initDataOnStartup } from "./scripts/initDATAonStartup.js";
-import { toggleDarkThem } from "./scripts/toggle-darkThem.js";
+import { addTask } from "./add-task.js";
+import { clearCompleted } from "./clear-completed.js";
+import { darkElement, inputElement } from "./elements.js";
+import { filterTasks } from "./filter-tasks.js";
+import { initDataOnStartup } from "./initDATAonStartup.js";
+import { toggleDarkThem } from "./toggle-darkThem.js";
 
 inputElement.addEventListener("keyup", addTask);
 darkElement.addEventListener("click", toggleDarkThem);
